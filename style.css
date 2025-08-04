@@ -16,7 +16,7 @@ body {
 /* For all H1 elements */
 h1 {
   text-align: center;
-  color: #800020; 
+  color: #ff0000; 
   font-size: 4em;
   font-weight: bold;
 }
@@ -54,4 +54,5 @@ h1 {
 }
 
 /* Define <... id="xxx"> attributes (#xxx) primarily used for specific styling, JavaScript interactions, or linking 
+
 to a specific section within a page */
