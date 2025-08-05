@@ -1,8 +1,13 @@
 @charset "UTF-8";
 /* File: style.css */
 /* Website: acts-public.github.io */
+/* Version: 2025-08-05-A */
+/* CNxx = Change Notes */
+/* CN01.1/Closed: '@media handheld' from Media Query 3 used for Dynamic Class Attributes deprecated at Media Query 4 */
+/* CN01.2/Closed: '@media orientation' from Media Query 4 now used for Dynamic Class Attributes */
+/* CN02.1/Open: Review use of em & px, considering rem & vw */
 
-/* Redefine Generic Attributes */
+/* Reset Generic Attributes, as some Browsers make false assumptions */
 * {
   margin: 0;
   padding: 0;
@@ -52,35 +57,66 @@ h4 {
   font-weight: bold;
 }
 
-/* Define <... class=xxx> attributes (.xxx), primarily used for applying the same styling to a group of elements */
+/* Define Class <... class=xxx> attributes (.xxx), primarily used for applying the same styling to a group of elements */
+/* Dynamic Class <... class=xxx> attributes (.xxx) based on Media Query */
 
-.header{
-  position: sticky;
-  top: 0;
-  background-color: aliceblue;
-  width:100%;
-  height:100px;
-  text-align: center;
+@media (orientation: landscape) {
+  .header{
+    position: sticky;
+    top: 0;
+    background-color: aliceblue;
+    width:100%;
+    height:100px;
+    text-align: center;
+  }
+  
+  .sidebar{
+    float:left;
+    width:15%;
+    background-color: aliceblue;
+    min-height: 550px;
+    text-indent: 2%;
+  }
+
+  .main{
+    float:left;
+    width:85%;
+    background-color: white;
+    text-indent: 2%;
+  }
 }
 
-.sidebar{
-  float:left;
-  width:15%;
-  background-color: aliceblue;
-  min-height: 600px;
-  text-indent: 2%;
+@media (orientation: potrait) {
+  .header{
+    position: sticky;
+    top: 0;
+    background-color: aliceblue;
+    width:100%;
+    height:150px;
+    text-align: center;
+  }
+  
+  .sidebar{
+    float:left;
+    width:20%;
+    background-color: aliceblue;
+    min-height: 700px;
+    text-indent: 2%;
+  }
+
+  .main{
+    float:left;
+    width:80%;
+    background-color: white;
+    text-indent: 2%;
+  }
 }
 
-.main{
-  float:left;
-  width:85%;
-  background-color: white;
-  text-indent: 2%;
-}
+/* Static Class <... class=xxx> attributes (.xxx) */
 
 .footer{
   clear:both;
-  height: 100px;
+  height: 75px;
   width: 100%;
   text-align: center;
   background-color: aliceblue;
