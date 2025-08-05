@@ -2,10 +2,11 @@
 /* File: style.css */
 /* Website: acts-public.github.io */
 /* Version: 2025-08-05-A */
-/* CNxx = Change Notes */
-/* CN01.1/Closed: '@media handheld' from Media Query 3 used for Dynamic Class Attributes deprecated at Media Query 4 */
-/* CN01.2/Closed: '@media orientation' from Media Query 4 now used for Dynamic Class Attributes */
-/* CN02.1/Open: Review use of em & px, considering rem & vw */
+/* Nxx = Notes */
+/* N01.1-Closed: '@media handheld' from Media Query 3 used for Dynamic Class Attributes deprecated at Media Query 4 */
+/* N01.2-Closed: '@media orientation' from Media Query 4 now used for Dynamic Class Attributes */
+/* N01.3-Open: Does Not render quote properly on Handheld: 'background-color: aliceblue' ignored */
+/* N02.1-Open: Review use of em & px, consider rem & vw */
 
 /* Reset Generic Attributes, as some Browsers make false assumptions */
 * {
@@ -57,6 +58,11 @@ h4 {
   font-weight: bold;
 }
 
+/* For all List elements */
+ul, ol {
+  padding-inline-start: 30px;
+}
+
 /* Define Class <... class=xxx> attributes (.xxx), primarily used for applying the same styling to a group of elements */
 /* Dynamic Class <... class=xxx> attributes (.xxx) based on Media Query */
 
@@ -75,14 +81,18 @@ h4 {
     width:15%;
     background-color: aliceblue;
     min-height: 550px;
-    text-indent: 2%;
+    text-indent: 0;
+    position: relative;
+    left: 5px;
   }
 
   .main{
     float:left;
-    width:85%;
+    width:75%;
     background-color: white;
-    text-indent: 2%;
+    text-indent: 0;
+    position: relative;
+    left: 20px;
   }
 }
 
@@ -101,14 +111,18 @@ h4 {
     width:20%;
     background-color: aliceblue;
     min-height: 700px;
-    text-indent: 2%;
+    text-indent: 0;
+    position: relative;
+    left: 5px;
   }
 
   .main{
     float:left;
-    width:80%;
+    width:70%;
     background-color: white;
-    text-indent: 2%;
+    text-indent: 0;
+    position: relative;
+    left: 20px;
   }
 }
 
